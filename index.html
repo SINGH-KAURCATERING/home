@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Singh & Kaur Catering - Authentic Indian Cuisine</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #fff5e6 0%, #ffe6cc 100%);
+        }
+        
+        header {
+            background: linear-gradient(135deg, #d35400 0%, #e67e22 100%);
+            color: white;
+            text-align: center;
+            padding: 3rem 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            letter-spacing: 2px;
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            font-style: italic;
+            opacity: 0.95;
+        }
+        
+        .hero-image {
+            width: 100%;
+            height: 400px;
+            background: url('https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200') center/cover;
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.7));
+            padding: 2rem;
+            color: white;
+        }
+        
+        .menu-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .menu-section {
+            background: white;
+            margin: 2rem 0;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .menu-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+        }
+        
+        .menu-section h2 {
+            color: #d35400;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid #e67e22;
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+        
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .menu-item {
+            background: linear-gradient(135deg, #fff9f0 0%, #fff 100%);
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid #e67e22;
+            transition: all 0.3s ease;
+        }
+        
+        .menu-item:hover {
+            background: linear-gradient(135deg, #ffe6cc 0%, #fff9f0 100%);
+            border-left-color: #d35400;
+            transform: translateX(5px);
+        }
+        
+        .contact-section {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 3rem 2rem;
+            margin-top: 3rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+        
+        .contact-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #fff;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        
+        .contact-item {
+            background: rgba(255,255,255,0.1);
+            padding: 1.5rem 2rem;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .contact-item:hover {
+            background: rgba(255,255,255,0.2);
+            transform: scale(1.05);
+        }
+        
+        .contact-item a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .contact-item a:hover {
+            color: #e67e22;
+        }
+        
+        .icon {
+            font-size: 1.5rem;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #666;
+            font-style: italic;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            .menu-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SINGH & KAUR CATERING</h1>
+        <p>Authentic Indian Cuisine for Every Occasion</p>
+    </header>
+    
+    <div class="hero-image">
+        <div class="hero-overlay">
+            <h2 style="font-size: 2rem; margin-bottom: 0.5rem;">Serving Melbourne's North</h2>
+            <p style="font-size: 1.1rem;">📍 111 Vearings Road, Wollert VIC 3750, Australia</p>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="menu-section">
+            <h2>🍲 Chaat</h2>
+            <img src="https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=800" alt="Indian Chaat" class="menu-image">
+            <div class="menu-grid">
+                <div class="menu-item">Dahi Bhalle</div>
+                <div class="menu-item">Dahi Golgappe</div>
+                <div class="menu-item">Bhelpuri Golgappe</div>
+                <div class="menu-item">Papri Chaat</div>
+                <div class="menu-item">Aloo Tikki</div>
+                <div class="menu-item">Tikki Chaat</div>
+                <div class="menu-item">Pav Bhaji</div>
+                <div class="menu-item">Cholle Bhature</div>
+                <div class="menu-item">Punjabi Kulcha</div>
+                <div class="menu-item">Chilla</div>
+                <div class="menu-item">Chowmin</div>
+                <div class="menu-item">Cheese Chilli</div>
+                <div class="menu-item">Manchurian</div>
+            </div>
+        </div>
+        
+        <div class="menu-section">
+            <h2>🥟 Pakore</h2>
+            <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=800" alt="Pakoras" class="menu-image">
+            <div class="menu-grid">
+                <div class="menu-item">Paneer Pakore</div>
+                <div class="menu-item">Bread Pakore</div>
+                <div class="menu-item">Gobbi Pakore</div>
+                <div class="menu-item">Mix Pakore</div>
+                <div class="menu-item">Cutlet</div>
+            </div>
+        </div>
+        
+        <div class="menu-section">
+            <h2>🫓 Parathas</h2>
+            <img src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=800" alt="Parathas" class="menu-image">
+            <div class="menu-grid">
+                <div class="menu-item">Aloo Paratha</div>
+                <div class="menu-item">Gobbi Paratha</div>
+                <div class="menu-item">Paneer Paratha</div>
+                <div class="menu-item">Mix Paratha</div>
+            </div>
+        </div>
+        
+        <div class="menu-section">
+            <h2>🍛 Main Course</h2>
+            <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=800" alt="Indian Main Course" class="menu-image">
+            <div class="menu-grid">
+                <div class="menu-item">Daal Makhni</div>
+                <div class="menu-item">Dal Tadka</div>
+                <div class="menu-item">Cholle Paneer</div>
+                <div class="menu-item">Shahi Paneer</div>
+                <div class="menu-item">Kadai Paneer</div>
+                <div class="menu-item">Paneer Labaabdar</div>
+                <div class="menu-item">Palak Paneer</div>
+                <div class="menu-item">Malai Kofta</div>
+                <div class="menu-item">Mix Vegetables</div>
+                <div class="menu-item">Biryani</div>
+            </div>
+        </div>
+        
+        <div class="menu-section">
+            <h2>🍞 Breads</h2>
+            <img src="https://images.unsplash.com/photo-1628840042765-356cda07504e?w=800" alt="Indian Breads" class="menu-image">
+            <div class="menu-grid">
+                <div class="menu-item">Plain Roti</div>
+                <div class="menu-item">Missi Roti</div>
+                <div class="menu-item">Tandoori Roti</div>
+                <div class="menu-item">Plain Naan</div>
+                <div class="menu-item">Garlic Naan</div>
+                <div class="menu-item">Butter Naan</div>
+            </div>
+        </div>
+        
+        <div class="menu-section">
+            <h2>🍰 Sweets</h2>
+            <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=800" alt="Indian Sweets" class="menu-image">
+            <div class="menu-grid">
+                <div class="menu-item">Gajar Halwa</div>
+                <div class="menu-item">Gulab Jamun</div>
+                <div class="menu-item">Kheer</div>
+                <div class="menu-item">Chukandar Halwa</div>
+                <div class="menu-item">Rabri Chukandar Halwa</div>
+                <div class="menu-item">Shahi Tukda</div>
+            </div>
+        </div>
+        
+        <div class="menu-section">
+            <h2>🥤 Drinks</h2>
+            <img src="https://images.unsplash.com/photo-1623065422902-30a2d299bbe4?w=800" alt="Indian Drinks" class="menu-image">
+            <div class="menu-grid">
+                <div class="menu-item">Tea</div>
+                <div class="menu-item">Coffee</div>
+                <div class="menu-item">Salted Lassi</div>
+                <div class="menu-item">Sweet Lassi</div>
+                <div class="menu-item">Mango Lassi</div>
+                <div class="menu-item">Cold Drinks</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="contact-section">
+        <h2>Contact Us</h2>
+        <p style="font-size: 1.2rem; margin-bottom: 1rem;">Get in touch for catering inquiries and bookings</p>
+        <div class="contact-info">
+            <div class="contact-item">
+                <a href="tel:0401450400">
+                    <span class="icon">📞</span>
+                    <span>0401 450 400</span>
+                </a>
+            </div>
+            <div class="contact-item">
+                <a href="mailto:singh.kaurcatering@gmail.com">
+                    <span class="icon">✉️</span>
+                    <span>singh.kaurcatering@gmail.com</span>
+                </a>
+            </div>
+            <div class="contact-item">
+                <span class="icon">📍</span>
+                <span>111 Vearings Road<br>Wollert VIC 3750<br>Australia</span>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>🙏 Thank you for choosing Singh & Kaur Catering 🙏</p>
+        <p>Making your events memorable with authentic flavors</p>
+    </footer>
+</body>
+</html>
